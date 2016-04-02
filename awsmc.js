@@ -24,7 +24,7 @@ co(function*() {
 
 function getConfig() {
   return new Promise(function(resolve, reject){
-    fs.readFile('./awsmc.conf', 'utf8', function (err, config) {
+    fs.readFile('./awsmc.json', 'utf8', function (err, config) {
       config = JSON.parse(config)
       config.Policy = JSON.stringify(config.Policy);
       resolve(config);
