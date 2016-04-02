@@ -1,0 +1,16 @@
+{
+  "name": "ManagementConsole",
+  "version": "1.0.0",
+  "description": "Node",
+  "main": "awsmc",
+  "scripts": {
+    "test": "node awsmc"
+  },
+  "author": "uji52",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.3.0",
+    "co": "^4.6.0",
+    "request": "^2.69.0"
+  }
+}
