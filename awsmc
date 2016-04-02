@@ -24,7 +24,8 @@ co(function*() {
 
 function getConfig() {
   return new Promise(function(resolve, reject){
-    fs.readFile('./awsmc.json', 'utf8', function (err, config) {
+    var filePath = process.argv[1] + ".json";
+    fs.readFile(filePath, 'utf8', function (err, config) {
       config = JSON.parse(config)
       config.Policy = JSON.stringify(config.Policy);
       resolve(config);
@@ -81,7 +82,6 @@ function getRedirectUrl(token) {
 }
 
 function open(url) {
-  console.log(url);
   exec("open \"" + url + "\"", function (error, out, err) {
   });
 }
