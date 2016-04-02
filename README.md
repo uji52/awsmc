@@ -25,6 +25,6 @@ Policy you want to request
 ## start
 ```
 $ npm install
-$ node awsmc.js
+$ node awsmc
 ```
 
