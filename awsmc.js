@@ -32,15 +32,9 @@ function getConfig() {
   });
 }
 
-function getAssumeRole() {
+function getAssumeRole(config) {
   return new Promise(function(resolve, reject){
-    var params = {
-      RoleArn: 'arn:aws:iam::615244477426:role/AssumeRole52',
-      RoleSessionName: 'uji52',
-      DurationSeconds: 900,
-      Policy: '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"*","Resource":"*"}]}'
-    };
-    sts.assumeRole(params, function(err, data) {
+    sts.assumeRole(config, function(err, data) {
       if (err) {
         reject(new Error(err));
       } else {
